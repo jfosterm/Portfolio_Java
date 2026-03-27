@@ -1,0 +1,13 @@
+Using the Noun/Verb method for figuring out initial structure and essential methods that should be available.
+v0.0.1
+The user should have access to a tracker, that should display price for given stock ticker.
+Class: Tracker (Type Singleton)
+Methods: getPrice(Wanted stock ticker)
+
+Class: Ticker (Object, should be many instances?)
+Methods: getPrice()
+
+v0.0.2
+Update Ticker class to hold more information, and thereafter give the
+responsibility of the ticker class to print itself with relevant information
+
