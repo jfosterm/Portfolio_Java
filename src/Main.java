@@ -8,5 +8,5 @@ void main() {
     tracker.add(t2);
     tracker.add(t3);
     tracker.add(t4);
-    tracker.printTickers();
+    GUI gui = new GUI(tracker);
 }
