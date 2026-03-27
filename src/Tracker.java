@@ -15,7 +15,7 @@ public class Tracker {
      * @param ticker to be added to the datastructure
      */
     public void add(Ticker ticker){
-        tickers.put(ticker.getTickerName(), ticker);
+        tickers.put(ticker.getTickerSymbol(), ticker);
     }
 
     /**
@@ -27,9 +27,13 @@ public class Tracker {
         tickerName = tickerName.toUpperCase();
         return tickers.get(tickerName);
     }
+
+    /**
+     * Prints information of all Tickers to terminal
+     */
     public void printTickers(){
         for(Ticker ticker : tickers.values()){
-            System.out.println(ticker.getTickerName());
+            ticker.display();
         }
     }
 
