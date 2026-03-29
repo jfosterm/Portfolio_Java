@@ -11,3 +11,8 @@ v0.0.2
 Update Ticker class to hold more information, and thereafter give the
 responsibility of the ticker class to print itself with relevant information
 
+v0.0.3
+Ability to add holdings to a given ticker, maybe in future will be its own data structure, but
+for now we will add to Ticker class.
+Also changing display method in ticker class to reflect holdings, current price, total value pr ticker and
+total value all in all.

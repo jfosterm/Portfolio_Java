@@ -20,7 +20,7 @@ public class Tracker {
 
     /**
      * Get method for retrieving ticker information based on the ticker symbol "APPL"
-     * @param tickerName
+     * @param tickerName Name of ticker
      * @return returns the Ticker object for the given ticker
      */
     public Ticker get(String tickerName){
@@ -32,9 +32,12 @@ public class Tracker {
      * Prints information of all Tickers to terminal
      */
     public void printTickers(){
+        int value = 0;
         for(Ticker ticker : tickers.values()){
             ticker.display();
+            value += ticker.getHoldingsValue();
         }
+        System.out.println("Total value of holdings:" + value);
     }
 
 }

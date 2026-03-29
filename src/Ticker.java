@@ -1,9 +1,11 @@
 public class Ticker {
     private String tickerSymbol;
     private int price;
-    public Ticker(String tickerSymbol, int price){
+    private int holdings;
+    public Ticker(String tickerSymbol, int price,  int holdings) {
         this.tickerSymbol = tickerSymbol.toUpperCase();
         this.price = price;
+        this.holdings = holdings;
     }
 
     /**
@@ -22,9 +24,20 @@ public class Ticker {
         return price;
     }
 
+    /**
+     * Returns value of holdings ticker
+     * @return holdings * current price
+     */
+    public int getHoldingsValue(){
+        return price*holdings;
+    }
+
     public void display(){
-        System.out.println(tickerSymbol);
-        System.out.println(price);
+        System.out.println("Ticker symbol: " + tickerSymbol);
+        System.out.println("Current price: " + price);
+        System.out.println("Holdings: " + holdings);
+        System.out.println("Current value: "+getHoldingsValue());
+        System.out.println("--------------------");
     }
 
 }
